@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import JsonResponse
 
-# Create your views here.
+def greetings(request):
+    result = {"message": "Welcome to cipher services!"}
+    return JsonResponse(result)

@@ -8,3 +8,4 @@ RUN pip install -r requirements.txt
 COPY ./ciphers_project ciphers_project/
 COPY ./entrypoint.sh .
 ENTRYPOINT [ "./entrypoint.sh" ]
+ALLOWED_HOSTS = [*]

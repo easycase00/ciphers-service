@@ -29,8 +29,8 @@ jobs:
       run: |
         python ciphers_project/manage.py test
         
-        - name: Build and push the image
-                run: |
-                      docker login --username easycase00 --password ${{secrets.ACCESS_TOKEN}} ghcr.io
-                      docker build -t ghcr.io/easycase00/ciphers-service:latest --file Dockerfile .  
-                      docker push ghcr.io/easycase00/ciphers-service:latest 
+    - name: Build and push the image
+      run: |
+        docker login --username easycase00 --password ${{secrets.ACCESS_TOKEN}} ghcr.io
+        docker build -t ghcr.io/easycase00/ciphers-service:latest --file Dockerfile .  
+        docker push ghcr.io/easycase00/ciphers-service:latest 
